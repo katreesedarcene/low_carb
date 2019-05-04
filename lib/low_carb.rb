@@ -1,6 +1,6 @@
-require "low_carb/version"
+require "nokogiri"
+require 'open-uri'
 
-module LowCarb
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative "low_carb/version"
+require_relative "low_carb/fake_news_obj"
+require_relative "low_carb/cli"

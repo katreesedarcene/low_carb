@@ -1,0 +1,6 @@
+class LowCarb::Obj 
+  
+  
+  
+  
+end
