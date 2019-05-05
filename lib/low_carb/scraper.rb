@@ -3,10 +3,10 @@ require 'pry'
 
 class Scraper
       
-    LowCarb_URL = https://www.ibreatheimhungry.com/
-#   def self.scrape_index_page(index_url)
-#   index_page = Nokogiri::HTML(open(index_url))
-#   students = []
+    LOWCARB_URL = https://www.ibreatheimhungry.com/
+  def self.scrape_lowcarb(index_url)
+  index_page = Nokogiri::HTML(open(index_url))
+  recipes = []
 #   index_page.css("div.roster-cards-container").each do |card|
 #     card.css(".student-card a").each do |student|
 #       student_profile = "#{student.attr('href')}"
