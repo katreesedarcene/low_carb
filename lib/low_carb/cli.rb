@@ -5,5 +5,9 @@ class LowCarb::CLI
         puts LowCarb::Obj.all
         Scraper.scrape_lowcarb
     end 
+    def welcome
+     puts "Welcome To Best LowCarb Recipes" 
+      
+    end
     
 end
