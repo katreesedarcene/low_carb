@@ -8,8 +8,10 @@ class Scraper
   recipes = []
   
   doc.css("div.site-container").each do |item|
-    item.css('ul')
-      binding.pry
+    item.css('p'). each do |recipe| 
+      
+    end
+      
     
   end 
  end
