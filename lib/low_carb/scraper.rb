@@ -7,10 +7,11 @@ class Scraper
   doc = Nokogiri::HTML(open(LOWCARB_URL))
   recipes = []
   
-  doc.css("div.site-container").each do |recipe|
-
-  end
-  end
- 
+  doc.css("div.site-container").each do |item|
+    item.css('ul')
+      binding.pry
+    
+  end 
  end
+end
 
