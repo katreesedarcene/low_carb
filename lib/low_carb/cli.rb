@@ -29,19 +29,20 @@ class LowCarb::CLI
       puts "Or type: 'Adios' to exit"
       user_input = gets.downcase.chomp 
       if (1..5).include?(user_input.to_i)
-     
-   end
-    
-    
-    
-    # def start 
-    #     LowCarb::Obj.get_data 
-    #     puts LowCarb::Obj.all
-    #     Scraper.scrape_lowcarb
-    # end 
-    # def welcome
-    # puts "Welcome To Best LowCarb Recipes" 
+        puts "Sending you to the recipe now"
+        Launchy.open(LowCarb::Obj.all[user_input.to_i-1].web_addr)
+      elsif user_input = "adios"
+        self.adios 
+       end
+     end
+    end
+    def adios
+      puts "Hasta luego"
+      exit
       
-    # end
+    end
+    
+    
+  
     
 end
