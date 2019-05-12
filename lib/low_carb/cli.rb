@@ -1,23 +1,22 @@
 class LowCarb::CLI
-   def start 
-     LowCarb::Scraper.get_recipe(PORKCHOP_URL)
-     LowCarb::Scraper.get_recipe(JALAPENOPOP_URL)
-     LowCarb::Scraper.get_recipe(MEATBALLS_URL)
-     LowCarb::Scraper.get_recipe(MACCHEESE_URL)
-     LowCarb::Scraper.get_recipe(CARNEASADA_URL)
-     LowCarb::CLI.call_user
+   def start
      
+     LowCarb::Scraper.get_urls.each do |link|
+      LowCarb::Scraper.get_recipe(link)
+    end
+     LowCarb::CLI.call_user
+   
    end
    def self.call_user
      user_input = nil 
      while user_input != "Adios"
-      puts "Hola, Welcome to my 5 favorite easy Mexican Keto Recipes"
+      puts "Hola, Welcome to my 5 favorite Easy Mexican Keto Recipes"
       puts "To see these recipes type: 'recipes'"
       puts "To exit type: 'Adios'"
       
       user_input = gets.downcase.chomp
       
-      case self
+      case user_input
       
       when 'recipes'
         self.display_recipes
@@ -48,6 +47,7 @@ class LowCarb::CLI
     end
     def self.adios
       puts "Hasta luego"
+      
       exit
       
     end

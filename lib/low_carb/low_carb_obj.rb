@@ -7,15 +7,17 @@ class LowCarb::Obj
 	    @@all = [] 
 
 
-	    def initialize(name)
-	        @name = name 
+	    def initialize
+	        
+	        
+	        
 	      
 	    end 
 
 
 	    def self.get_data 
 	        10.times do 
-	            @@all << self.new("Ribs")
+	            @@all << self.new
 	        end 
 	    end 
 
@@ -29,8 +31,4 @@ class LowCarb::Obj
 	      
 	    end
 
-
-  
-  
-  
 end
