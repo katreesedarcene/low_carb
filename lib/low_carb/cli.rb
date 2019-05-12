@@ -17,6 +17,8 @@ class LowCarb::CLI
       
       user_input = gets.downcase.chomp
       
+      case self
+      
       when 'recipes'
         self.display_recipes
       when 'adios'
@@ -39,7 +41,7 @@ class LowCarb::CLI
       if (1..5).include?(user_input.to_i)
         puts "Sending you to the recipe now"
         Launchy.open(LowCarb::Obj.all[user_input.to_i-1].web_addr)
-      elsif user_input = "adios"
+      elsif user_input == "adios"
         self.adios 
        end
      end
