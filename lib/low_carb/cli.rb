@@ -1,6 +1,10 @@
 class LowCarb::CLI
    def start 
-     LowCarb::Scraper.get_recipe(PORKCHOP_URL)(JALAPENOPOP_URL)(MEATBALLS_URL)(MACCHEESE_URL)(CARNEASADA_URL)
+     LowCarb::Scraper.get_recipe(PORKCHOP_URL)
+     LowCarb::Scraper.get_recipe(JALAPENOPOP_URL)
+     LowCarb::Scraper.get_recipe(MEATBALLS_URL)
+     LowCarb::Scraper.get_recipe(MACCHEESE_URL)
+     LowCarb::Scraper.get_recipe(CARNEASADA_URL)
      LowCarb::CLI.call_user
      
    end
