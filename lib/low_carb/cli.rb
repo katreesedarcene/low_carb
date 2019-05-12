@@ -49,8 +49,4 @@ class LowCarb::CLI
       exit
       
     end
-    
-    
-  
-    
 end
