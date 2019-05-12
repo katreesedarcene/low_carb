@@ -1,21 +1,15 @@
-require 'open-uri'
-require 'pry'
 
 class Scraper
       LOWCARB_URL ="https://www.ibreatheimhungry.com/15-best-low-carb-mexican-recipes/"
-  def self.scrape_lowcarb
-  doc = Nokogiri::HTML(open(LOWCARB_URL))
-  recipes = []
+      PORKCHOP_URL =https://www.ibreatheimhungry.com/keto-pork-chops-al-pastor-low-carb/
+  def self.get_page(url)
+      return Nokogiri::HTML(open(url))
   
-    doc.css("div.site-container").each do |item|
-    item.css('p').each do |link|
-     link.css('a').each do |recipe|
-        
-    recipe_link = "#{recipe.attr('href')}"
-    
-     end
-    end
-  end 
- end
+  end
+  def self.get_recipe(url)
+    doc = self.get_page(recipe_url)
+    recipe_addr = doc.css(".tasty-jump-print-buttons .tasty-print-button")
+  end
+  
 end
 

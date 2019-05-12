@@ -1,5 +1,5 @@
 class LowCarb::Obj 
-    attr_accessor :name
+    attr_accessor :name, :web_addr 
 
 
 
