@@ -38,8 +38,8 @@ class LowCarb::CLI
       puts "Or type: 'Adios' to exit"
       user_input = gets.downcase.chomp 
       if (1..5).include?(user_input.to_i)
-        puts "Sending you to the recipe now"
-        Launchy.open(LowCarb::Obj.all[user_input.to_i-1].web_addr)
+        puts "Here's the link"
+        puts LowCarb::Obj.all[user_input.to_i-1].web_addr
       elsif user_input == "adios"
         self.adios 
        end
