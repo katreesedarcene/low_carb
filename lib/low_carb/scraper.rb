@@ -9,6 +9,8 @@ class Scraper
   def self.get_recipe(url)
     doc = self.get_page(recipe_url)
     recipe_addr = doc.css(".tasty-jump-print-buttons .tasty-print-button")
+    recipe_name = doc.css(".entry-header .entry-title").text
+    new_recipe = LowCarb::Obj
   end
   
 end
