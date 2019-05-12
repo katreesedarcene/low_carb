@@ -24,7 +24,12 @@ class LowCarb::CLI
        puts "#{counter}. #{recipe.name}"
        counter += 1 
      end
-     puts "Please enter the number of the recipe you want to try"
+     while user_input != "Adios"
+      puts "Please enter the number of the recipe you want to try"
+      puts "Or type: 'Adios' to exit"
+      user_input = gets.downcase.chomp 
+      if (1..5).include?(user_input.to_i)
+     
    end
     
     
