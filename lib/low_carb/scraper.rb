@@ -1,5 +1,5 @@
 
-class Scraper
+class LowCarb::Scraper
       PORKCHOP_URL ="https://www.ibreatheimhungry.com/keto-pork-chops-al-pastor-low-carb/"
       JALAPENOPOP_URL = "https://www.ibreatheimhungry.com/bacon-wrapped-stuffed-jalapenos-2/"
       MEATBALLS_URL = "https://www.ibreatheimhungry.com/green-chicken-enchilada-meatballs-low-carb-gluten-free/"

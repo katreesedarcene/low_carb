@@ -1,5 +1,9 @@
 class LowCarb::CLI
-    
+   def start 
+     LowCarb::Scraper.get_recipe(PORKCHOP_URL)(JALAPENOPOP_URL)(MEATBALLS_URL)(MACCHEESE_URL)(CARNEASADA_URL)
+     LowCarb::CLI.call_user
+     
+   end
    def self.call_user
      user_input = nil 
      while user_input != "Adios"
@@ -17,7 +21,7 @@ class LowCarb::CLI
     end
   end
   
-   def display_recipes
+   def self.display_recipes
      user_input = nil
      counter = 1 
      LowCarb::Obj.all.each do |recipe|
@@ -36,7 +40,7 @@ class LowCarb::CLI
        end
      end
     end
-    def adios
+    def self.adios
       puts "Hasta luego"
       exit
       
